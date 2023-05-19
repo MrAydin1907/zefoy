@@ -32,13 +32,13 @@ class zefoy:
         chrome_options.add_argument("--disable-session-crashed-bubble")       
         self.driver = uc.Chrome(options=chrome_options)
         self.captcha_box = '/html/body/div[5]/div[2]/form/div/div'
-        self.clear       = "clear"
+        self.clear = "clear"
         
         if platform.system() == "Windows":
             self.clear = "cls"
         
-        self.color  = Fore.BLUE
-        self.sent   = 0
+        self.color = Fore.BLUE
+        self.sent = 0
         self.xpaths = {
             "followers"     : "/html/body/div[6]/div/div[2]/div/div/div[2]/div/button",
             "hearts"        : "/html/body/div[6]/div/div[2]/div/div/div[3]/div/button",
@@ -237,4 +237,3 @@ class zefoy:
 if __name__ == "__main__":
     obj = zefoy()
     obj.main()
-    #input()
